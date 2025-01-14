@@ -1,0 +1,41 @@
+body {
+    background-color: #2E073F;
+}
+
+.game-state {
+    color: #FEFFAC;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 4.5rem;
+}
+
+.yellow{
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.red {
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.green {
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.blue {
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.btn {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 1rem;
+    border-width: 5px;
+}
+
+.pressed {
+    opacity: 0.5;
+}
+  
