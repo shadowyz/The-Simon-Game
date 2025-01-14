@@ -85,7 +85,7 @@ function revealTiles(gameLevel) {
         }, delay);
 
         // Increase the delay by a little to space out the animations
-        delay += 1000; // 1000ms = 1 second delay, you can adjust this value for faster/slower animations
+        delay += 500; // 1000ms = 1 second delay, you can adjust this value for faster/slower animations
     }
 
     return randomNumList;  // Return the generated sequence for comparison with player's input
