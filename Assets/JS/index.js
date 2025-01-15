@@ -51,10 +51,20 @@ function animateButton(num) {
     // Apply a temporary 'pressed' effect by changing button color or adding a CSS class
     $(buttonClass).addClass("pressed");  // Add 'pressed' class to simulate pressing the button
 
+    // Play the corresponding sound for the button
+    playSound(buttonClass);
+
     // Remove the 'pressed' effect after a short delay
     setTimeout(function () {
         $(buttonClass).removeClass("pressed");  // Remove the 'pressed' class after the delay
     }, 500);  // Duration of the highlight (500ms)
+}
+
+function playSound(className) {
+    // Play the corresponding sound for the button
+    let buttonName = className.slice(1);  // Remove the '.' from the class name
+    let buttonSound = new Audio("./Assets/sounds/" + buttonName + ".mp3");  // Create a new Audio object
+    buttonSound.play();  // Play the sound
 }
 
 // Function to generate random sequence of numbers for the level
