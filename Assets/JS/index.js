@@ -163,8 +163,22 @@ $(".btn").click(function () {
             }, 3000);  // 3000ms = 3 seconds
         }
     } else {
-        $("h1").text("Game Over! Press Any Key to Restart");
-        resetGame();  // Reset the game after a loss
+        // Play game over sound
+        let gameOverSound = new Audio("./Assets/sounds/wrong.mp3");
+        gameOverSound.play();
+
+        // Change the background color to red to indicate a wrong sequence
+        $("body").toggleClass("red-bg");
+        setTimeout(function () {
+            $("body").toggleClass("red-bg");
+        }, 1000);  // Change the background color back after 1 second
+
+        // If the player entered the wrong sequence
+        $("h1").text("Game Over!");
+        setTimeout(function () {
+            $("h1").text("Press A Key to Restart");
+            resetGame();  // Reset the game after a loss
+        }, 1000);
     }
 
 });
