@@ -67,7 +67,7 @@ function animateButton(num) {
     // Remove the 'pressed' effect after a short delay
     setTimeout(function () {
         $(buttonClass).removeClass("pressed");  // Remove the 'pressed' class after the delay
-    }, 500);  // Duration of the highlight (500ms)
+    }, 250);  // Duration of the highlight (500ms)
 }
 
 function playSound(className) {
@@ -105,7 +105,7 @@ function revealTiles(gameLevel) {
         }, delay);
 
         // Increase the delay by a little to space out the animations
-        delay += 500; // 1000ms = 1 second delay, you can adjust this value for faster/slower animations
+        delay += 400; // 1000ms = 1 second delay, you can adjust this value for faster/slower animations
     }
 
     return randomNumList;  // Return the generated sequence for comparison with player's input
