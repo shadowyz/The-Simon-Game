@@ -2,6 +2,16 @@ var tileIDList = [];
 let clickedBtnList = [];
 let level = 0; // Track the current level
 
+// jQuery code begins to run after the DOM has been completely loaded
+$(document).ready(function () {
+    $(document).keypress(function () {
+        // Start the game only if the game has been reset (tileIDList is empty)
+        if (tileIDList.length === 0) {
+            startGame();
+        }
+    });
+});
+
 // Function to start the game
 function startGame() {
 
@@ -187,15 +197,6 @@ $(".btn").click(function () {
 function resetGame() {
     tileIDList = [];
     clickedBtnList = [];
+    level = 0; // Reset level to 0
     $("h1").text("Please press any key to restart"); // Reset the heading text
 }
-
-// jQuery code begins to run after the DOM has been completely loaded
-$(document).ready(function () {
-    $(document).keypress(function () {
-        // Start the game only if the game has been reset (tileIDList is empty)
-        if (tileIDList.length === 0) {
-            startGame();
-        }
-    });
-});
